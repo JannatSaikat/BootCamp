@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Facebook Test" parallel="false">
+<suite name="Amazon Test" parallel="false">
 
     <parameter name="cloud" value="false"/>
     <parameter name="envName" value="browserstack"/>
@@ -13,11 +13,12 @@
 
 
 
-    <test name="Facebook Home">
+    <test name="Amazon Home">
         <classes>
-            <class name="TestHome.TestHomePage"/>
-
-
+            <!--<class name="amazonPackageTest.AccountTest"/>-->
+            <!--<class name="amazonPackageTest.AutosuggestionTest"/>-->
+            <!--<class name="amazonPackageTest.BrowseProductTest"/>-->
+            <class name="amazonPackageTest.VerifyItemTest"/>
         </classes>
     </test>
 </suite>

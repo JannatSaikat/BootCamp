@@ -25,9 +25,26 @@ public class HomePage extends CommonAPI {
     @FindBy(linkText = "People")
     WebElement people;
 
-    @FindBy(partialLinkText = "Add Friend")
+    @FindBy(xpath = "//button[@aria-label='Add Friend']")
     WebElement addFriend;
 
+    @FindBy(className = "_4kny")
+    WebElement friendReq;
+
+    @FindBy(name = "actions[accept]")
+    WebElement acceptButton;
+
+    @FindBy(partialLinkText = "Like")
+    WebElement like;
+
+    @FindBy(xpath = "//input[@type='file']")
+    WebElement upload;
+
+    @FindBy(xpath = "//input[@type='submit']")
+    WebElement submit;
+
+    @FindBy(partialLinkText = "Comment")
+    WebElement comment;
 
     // Signing In
     public String signIn(){
@@ -52,7 +69,42 @@ public class HomePage extends CommonAPI {
     //Send a friend request
     public void friendRequest(){
         signIn();
+        System.out.println(addFriend.isEnabled());
         addFriend.click();
     }
 
+    //Accepting friendRequest
+    public void acceptRequest(){
+        signIn();
+        System.out.println(friendReq.isEnabled());
+        friendReq.click();
+        acceptButton.click();
+
+    }
+
+    //Like a post
+    public void likePost(){
+        signIn();
+        System.out.println(like.isEnabled());
+        like.click();
+    }
+
+    //upload file
+    public void uploadFile(){
+        signIn();
+        System.out.println(upload.isEnabled());
+        upload.sendKeys("/Users/alifnabila/Downloads/OneFire.jpg");
+        sleepFor(30);
+        submit.click();
+    }
+
+    //Comment on a post.
+
+    public void comment(){
+        signIn();
+        System.out.println(comment.isEnabled());
+        comment.click();
+        comment.sendKeys("yeah, this a comment");
+
+    }
 }

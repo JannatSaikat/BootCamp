@@ -32,8 +32,29 @@ public class TestHomePage extends CommonAPI {
         System.out.println("Facebook search is working");
     }
 
-    @Test (enabled =    )
-    public void testFriend(){
+    @Test (enabled = false )
+    public void testFriendRequest(){
         home.friendRequest();
     }
+
+    @Test(enabled = false)
+    public void testAcceptRequest(){
+        home.acceptRequest();
+    }
+
+    @Test(enabled = false)
+    public void testLikePost(){
+        home.likePost();
+    }
+
+    @Test(enabled = true)
+    public void testUploadFile(){
+        home.uploadFile();
+    }
+
+    @Test(enabled = false)
+    public void testcomment(){
+        home.comment();
+    }
+
 }
