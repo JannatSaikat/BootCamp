@@ -3,10 +3,16 @@ package Home;
 import base.CommonAPI;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class HomePage extends CommonAPI {
 
@@ -52,7 +58,19 @@ public class HomePage extends CommonAPI {
         Assert.assertEquals(forgot.isEnabled(), true);
         email.sendKeys("ytpromo75@gmail.com");
         pass.sendKeys("850568", Keys.ENTER);
-        //cancelAlert();
+
+//        cancelAlert();
+
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--disable-notifications");
+
+//        Map<String, Object> prefs = new HashMap<String, Object>();
+//        prefs.put("profile.default_content_setting_values.notifications", 2);
+//        ChromeOptions options = new ChromeOptions();
+//        options.setExperimentalOption("prefs", prefs);
+//        WebDriver driver = new ChromeDriver(options);
+//        options.addArguments("--disable-notifications");
+
         return  driver.getTitle();
     }
 

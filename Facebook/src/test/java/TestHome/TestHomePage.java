@@ -19,7 +19,7 @@ public class TestHomePage extends CommonAPI {
         home = PageFactory.initElements(driver, HomePage.class);
     }
 
-    @Test (enabled = false)
+    @Test (enabled = true)
     public void testSignIn(){
         Assert.assertEquals(home.signIn(),"Facebook");
         System.out.println("Facebook Log In is successfull");
@@ -47,7 +47,7 @@ public class TestHomePage extends CommonAPI {
         home.likePost();
     }
 
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void testUploadFile(){
         home.uploadFile();
     }

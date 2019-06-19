@@ -13,7 +13,7 @@
 
 
 
-    <test name="eBay Home">
+    <test name="Facebook Home">
         <classes>
             <class name="TestHome.TestHomePage"/>
 
